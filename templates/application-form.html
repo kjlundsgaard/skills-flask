@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+    {% block title %}Skills-HTML-CSS{% endblock %}
+    {% block body %}
+    <h1>Job Application</h1>
+    <p id="instructions">Please fill out the following fields to complete your job application</p>
+    <form action = "/application" method="POST">
+        <label for="first-name">First name:</label>
+        <input type="text" id="first-name" name="first">
+        <br>
+        <label for="last-name" class="last">Last name:</label>
+        <input type="text" id="last-name" name="last">
+        <br>
+        <label for="salary-number">Salary requirements:</label>
+        <input type="number" name="salary" min="1" max="50000000000" id="salary-number">
+        <br>
+        <label for="job">Applying For:</label>
+        <select id="job" name="job">
+            <option value="software-engineer">Software Engineer</option>
+            <option value="qa-engineer">QA Engineer</option>
+            <option value="product-manager">Product Manager</option>
+        </select>
+        <br>
+        <input type="submit">
+    </form>
+    {% endblock %}
